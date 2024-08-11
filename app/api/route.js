@@ -1,7 +1,7 @@
 import { HfInference } from "@huggingface/inference";
 import { NextResponse } from "next/server";
 
-const HF_TOKEN = "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";
+const HF_TOKEN = process.env.HF_TOKEN;
 const inference = new HfInference(HF_TOKEN);
 
 export async function POST(request) {
